@@ -3,7 +3,7 @@
 import java.util.Random;
 
 public class Vehicles {
-    String name = "Vehicle";
+    String name;
     String plate;
     private boolean lockStatus;
     private String shineStatus;

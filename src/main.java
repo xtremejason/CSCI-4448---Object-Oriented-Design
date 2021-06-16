@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.List;
+
 public class main {
 
     //For running test cases
@@ -7,5 +11,12 @@ public class main {
 
         test.lock();
         test.displayPlate();
+
+        String[] names = {"Bobby", "Joe", "Andrea","Timothy","Audrey","Madison","Devin","Ashley","Brenda","Cody","AJ","Randy","Lisa","Steve","Will"};
+
+
+
+
+
     }
 }
