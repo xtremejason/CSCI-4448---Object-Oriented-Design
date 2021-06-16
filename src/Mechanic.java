@@ -5,7 +5,8 @@
         }
 
 
-        public void unlock () {
+        public void unlock (Vehicles vehicle) {
+            System.out.println(name + " has unlocked " + vehicle.getPlate());
         }
 
         public void wash () {

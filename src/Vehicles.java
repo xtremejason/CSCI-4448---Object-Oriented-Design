@@ -51,4 +51,7 @@ public class Vehicles {
     public void displayPlate(){
         System.out.println(plate);
     }
+    public String getPlate(){
+        return plate;
+    }
 }

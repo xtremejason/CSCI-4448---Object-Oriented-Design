@@ -9,12 +9,13 @@ public class main {
         //Vehicles test = new Vehicles('t');
         Bike test = new Bike();
         test.lock();
-        test.displayPlate();
+        test.getPlate();
 
         //Testing for Mechanic -> GarageEmployee super/sub-class
         Mechanic test2 = new Mechanic();
         test2.GarageEmployee();
         test2.getName();
+
 
 
 
