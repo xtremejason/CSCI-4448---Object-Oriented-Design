@@ -1,2 +1,2 @@
-public class Bike {
+public class Bike extends Motorcycle{
 }

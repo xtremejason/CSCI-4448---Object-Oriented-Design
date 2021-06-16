@@ -1,2 +1,2 @@
-public class SUV {
+public class SUV extends Car{
 }

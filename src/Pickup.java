@@ -1,2 +1,2 @@
-public class Pickup {
+public class Pickup extends Truck{
 }

@@ -1,2 +1,2 @@
-public class Convertible {
+public class Convertible extends Car{
 }

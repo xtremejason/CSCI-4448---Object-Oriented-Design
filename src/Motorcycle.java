@@ -1,2 +1,3 @@
-public class Motorcycle {
+public class Motorcycle extends Vehicles{
+
 }

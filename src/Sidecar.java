@@ -1,2 +1,2 @@
-public class Sidecar {
+public class Sidecar extends Motorcycle{
 }
