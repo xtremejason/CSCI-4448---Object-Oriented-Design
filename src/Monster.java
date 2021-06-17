@@ -4,6 +4,6 @@ public class Monster extends Truck{
     }
 
     public void runs(){
-        System.out.println(name + " " + plate + " " + "Vrooooms");
+        System.out.println(plate + " Vrooooms");
     }
 }

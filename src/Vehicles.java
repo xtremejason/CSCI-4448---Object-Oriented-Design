@@ -3,14 +3,13 @@
 import java.util.Random;
 
 public class Vehicles {
-    String name;
     String plate;
     private boolean lockStatus;
-    private String shineStatus;
+    private boolean shineStatus;
+    private boolean tunedStatus;
 
     //Default Constructor
     public Vehicles() {
-        name = "none";
         plate = "0";
     }
 
@@ -24,28 +23,30 @@ public class Vehicles {
 
     public void lock(){
         lockStatus = true;
-        System.out.println(name + " " + plate + " " + "locked");
     }
 
     public void unlock(){
         lockStatus = false;
-        System.out.println(name + " " + plate + " " + "unlocked");
     }
 
     public void shine(){
-        shineStatus = "clean";
+        shineStatus = true;
         if(Math.random() < .7) {
-            System.out.println(name + " " + plate + " " + "Shined");
+            System.out.println(plate + " Shines in the sun.");
         } else {
-            System.out.println(name + " " + plate + " " + "Sparkles!");
+            System.out.println(plate + " Sparkles so bright!!");
         }
     }
 
+    public void tune(){
+        tunedStatus = true;
+    }
+
     public void runs(){
-        System.out.println(name + " " + plate + " " + "Runs");
+        System.out.println(plate + " Runs");
     }
     public void drive(){
-        System.out.println(name + " " + plate + " " + "Drives");
+        System.out.println(plate + " Drives");
     }
 
     public void displayPlate(){

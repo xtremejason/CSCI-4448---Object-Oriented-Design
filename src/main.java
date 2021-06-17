@@ -15,6 +15,7 @@ public class main {
         Mechanic test2 = new Mechanic();
         test2.GarageEmployee();
         test2.getName();
+        test2.lockUp(test);
 
 
 

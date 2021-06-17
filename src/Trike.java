@@ -4,6 +4,6 @@ public class Trike extends Motorcycle{
     }
 
     public void runs(){
-        System.out.println(name + " " + plate + " " + "Pedals");
+        System.out.println(plate + " " + "Pedals");
     }
 }
