@@ -4,7 +4,6 @@
         Mechanic(){
         }
 
-
         public void unlock (Vehicles vehicle) {
             vehicle.unlock();
             System.out.println(name + " has unlocked " + vehicle.getPlate());

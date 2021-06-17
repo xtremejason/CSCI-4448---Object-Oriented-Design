@@ -22,7 +22,31 @@ public class main {
         //Actual Program
         //public List<Vehicles>;
 
+        //Hard coded #'s, can be modified in future.
+        int days = 10;
+        int workload_per_day = 5;
 
+        for(int i=0; i<days; i++){
+            Mechanic mech = new Mechanic();
+            mech.GarageEmployee();
+            Garage garage = new Garage();
+            List<Vehicles> vehicles_to_work = new ArrayList<Vehicles>();
+
+            for(int j=0; j<workload_per_day; j++){
+                vehicles_to_work.add(garage.createVehicleObject());
+            }
+
+            for(int k=0; k < vehicles_to_work.size(); k++){
+                mech.unlock(vehicles_to_work.get(k));
+                mech.wash(vehicles_to_work.get(k));
+                mech.tuneUp(vehicles_to_work.get(k));
+                mech.testDrive(vehicles_to_work.get(k));
+                mech.lockUp(vehicles_to_work.get(k));
+            }
+
+
+
+        }
 
 
 
