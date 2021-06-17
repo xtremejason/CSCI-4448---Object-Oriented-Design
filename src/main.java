@@ -26,7 +26,7 @@ public class main {
         int days = 10;
         int workload_per_day = 5;
 
-        for(int i=0; i<days; i++){
+        for(int i=1; i<=days; i++){
             Mechanic mech = new Mechanic();
             mech.GarageEmployee();
             Garage garage = new Garage();
@@ -40,9 +40,22 @@ public class main {
                 mech.unlock(vehicles_to_work.get(k));
                 mech.wash(vehicles_to_work.get(k));
                 mech.tuneUp(vehicles_to_work.get(k));
-                mech.testDrive(vehicles_to_work.get(k));
+
+                //Condition for potential MonsterTruck crash
+                if(mech.testDrive(vehicles_to_work.get(k)) == false){
+                    vehicles_to_work.remove(k);
+                    //calling superclass constructor method replaces employee.
+                    mech.GarageEmployee();
+                }
+                //mech.testDrive(vehicles_to_work.get(k));
                 mech.lockUp(vehicles_to_work.get(k));
             }
+
+            System.out.println("\n");
+            System.out.println("********************");
+            System.out.println("Tasks for day " + i + " are COMPLETE.");
+            System.out.println("********************");
+            System.out.println("\n");
 
 
 

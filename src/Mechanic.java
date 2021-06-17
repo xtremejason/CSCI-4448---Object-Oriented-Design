@@ -19,9 +19,10 @@
             System.out.println(name + " has tuned " + vehicle.getPlate());
         }
 
-        public void testDrive (Vehicles vehicle) {
+        public boolean testDrive (Vehicles vehicle) {
             vehicle.drive();
             System.out.println(name + " has test driven " + vehicle.getPlate());
+            return true;
         }
 
         public void lockUp (Vehicles vehicle) {
