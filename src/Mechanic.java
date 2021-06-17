@@ -1,4 +1,5 @@
-
+    //Identity principle is observed because every Mechanic object is unique and has it's own
+    //unique set of qualities as well as memory location.
     public class Mechanic extends GarageEmployee{
 
         //Default Constructor

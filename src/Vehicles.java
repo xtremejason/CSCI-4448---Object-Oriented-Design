@@ -5,6 +5,9 @@ import java.util.Random;
 //Upmost Superclass for several vehicles
 public class Vehicles {
     //Superclass Variables
+    //Encapsulation is observed here with Private and protected variables.
+    //Private is only accessible to immediate class
+    //Protected is only accessible to self and extended classes.
     String plate;
     private boolean lockStatus;
     private boolean shineStatus;
