@@ -4,6 +4,7 @@ public class Car extends Vehicles{
         generatePlate("CAR");
     }
 
+    //Adds condition for spontaneous sputter event for Car
     public void tune(){
         tunedStatus = true;
         if(Math.random() > .75){

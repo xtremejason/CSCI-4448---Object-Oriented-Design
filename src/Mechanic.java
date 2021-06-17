@@ -1,6 +1,7 @@
 
     public class Mechanic extends GarageEmployee{
 
+        //Default Constructor
         Mechanic(){
         }
 

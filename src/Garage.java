@@ -3,7 +3,10 @@ import java.util.Random;
 public class Garage {
     private int randomNum;
 
-    //method to create random vehicle object
+    Garage(){
+    }
+
+    //method to create objects of random vehicles with approx. equal probability.
     public Vehicles createVehicleObject(){
         Random rand = new Random();
         randomNum = rand.nextInt(11);

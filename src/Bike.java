@@ -4,6 +4,7 @@ public class Bike extends Motorcycle{
         generatePlate("BIK");
     }
 
+    //override method runs
     public void runs(){
         System.out.println(plate + " " + "Pedals");
     }

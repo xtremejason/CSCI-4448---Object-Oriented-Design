@@ -2,7 +2,9 @@
  */
 import java.util.Random;
 
+//Upmost Superclass for several vehicles
 public class Vehicles {
+    //Superclass Variables
     String plate;
     private boolean lockStatus;
     private boolean shineStatus;
@@ -31,6 +33,7 @@ public class Vehicles {
         lockStatus = false;
     }
 
+    //Added 30% chance occurrence of vehicle sparkling instead of shine from a wash
     public void shine(){
         shineStatus = true;
         if(Math.random() < .7) {
@@ -47,6 +50,7 @@ public class Vehicles {
     public void runs(){
         System.out.println(plate + " " + runStatus);
     }
+
     public boolean drive(){
         System.out.println(plate + " Drives");
         return true;
