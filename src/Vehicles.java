@@ -6,11 +6,13 @@ public class Vehicles {
     String plate;
     private boolean lockStatus;
     private boolean shineStatus;
-    private boolean tunedStatus;
+    protected boolean tunedStatus;
+    protected String runStatus;
 
     //Default Constructor
     public Vehicles() {
         plate = "0";
+        runStatus = "runs";
     }
 
     //Random license plate generation with param
@@ -43,7 +45,7 @@ public class Vehicles {
     }
 
     public void runs(){
-        System.out.println(plate + " Runs");
+        System.out.println(plate + " " + runStatus);
     }
     public void drive(){
         System.out.println(plate + " Drives");
