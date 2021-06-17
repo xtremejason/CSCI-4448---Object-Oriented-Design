@@ -47,8 +47,9 @@ public class Vehicles {
     public void runs(){
         System.out.println(plate + " " + runStatus);
     }
-    public void drive(){
+    public boolean drive(){
         System.out.println(plate + " Drives");
+        return true;
     }
 
     public void displayPlate(){
