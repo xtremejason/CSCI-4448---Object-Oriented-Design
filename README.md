@@ -20,7 +20,7 @@ Had a lot of fun! <br />
 
 
 
-**OOAD Project Title: Homework 3 - Car Garage 
+**OOAD Project Title: Homework 3 - Car Garage  <br />
 Team Members: Jason Nguyen, Varunjit Srinivas, Isaac Sim**
 
 We were all eager to code the Design Patterns that we have recently learned. We were pretty confident in our ability given the elaborate examples of the design patterns we learned in class and in our reading materials. We decided early on to delegate the work evenly, and to each make clones of the master branch so that we can work on our separate implementations individually.
