@@ -20,8 +20,8 @@ public abstract class GarageEmployee {
     }
 
     //name getter
-    public void getName(){
-        System.out.println(name);
+    public String getName(){
+        return name;
     }
 
 
