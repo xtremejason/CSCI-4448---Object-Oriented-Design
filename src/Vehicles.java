@@ -8,15 +8,11 @@ public class Vehicles {
     //Encapsulation is observed here with Private and protected variables.
     //Private is only accessible to immediate class
     //Protected is only accessible to self and extended classes.
-    protected String plate;
+    String plate;
     private boolean lockStatus;
     private boolean shineStatus;
     protected boolean tunedStatus;
     protected String runStatus;
-
-    //Reference Variables for FuelType Interface
-    FuelType fuelType;
-
 
     //Default Constructor
     public Vehicles() {
@@ -66,12 +62,7 @@ public class Vehicles {
     public void displayPlate(){
         System.out.println(plate);
     }
-
     public String getPlate(){
         return plate;
-    }
-
-    public void getFuelType(){
-        fuelType.printFuel();
     }
 }
