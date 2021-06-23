@@ -1,5 +1,3 @@
-import java.util.Random;
-
 /*
 Abstract class used for Inheritance and Polymorphism to Mechanic class.
 Objects cannot be created for abstract classes, but it is useful to Mechanic class
@@ -11,10 +9,8 @@ public abstract class GarageEmployee {
     String[] names = {"Bobby", "Joe", "Andrea","Timothy","Audrey","Madison","Devin","Ashley","Brenda","Cody","AJ","Randy","Lisa","Steve","Will"};
 
     //constructor sets name of employee and prints update.
-    public void GarageEmployee(){
-        Random rand = new Random();
-        int randomNum = rand.nextInt(14);
-        name = names[randomNum];
+    public GarageEmployee(int r){
+        name = names[r];
         System.out.println(name + " arrives to work");
     }
 

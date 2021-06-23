@@ -11,6 +11,7 @@ public class Garage {
     public Vehicles createVehicleObject(){
         Random rand = new Random();
         randomNum = rand.nextInt(11);
+        CarFactory cFactory = new CarFactory();
 
         switch(randomNum){
             case 0:
@@ -22,18 +23,15 @@ public class Garage {
             case 2:
                 Sidecar sidecar = new Sidecar();
                 return sidecar;
+            //Factory method to instantiate car subclasses
             case 3:
-                Convertible convertible = new Convertible();
-                return convertible;
+                return cFactory.getCar("CONVERTIBLE");
             case 4:
-                Hatchback hatchback = new Hatchback();
-                return hatchback;
+                return cFactory.getCar("HATCHBACK");
             case 5:
-                SUV suv = new SUV();
-                return suv;
+                return cFactory.getCar("SUV");
             case 6:
-                Wagon wagon = new Wagon();
-                return wagon;
+                return cFactory.getCar("WAGON");
             case 7:
                 Pickup pickup = new Pickup();
                 return pickup;
@@ -43,7 +41,7 @@ public class Garage {
             case 9:
                 Monster monster = new Monster();
                 return monster;
-           case 10:
+            case 10:
                 Moped moped = new Moped();
                 return moped;
             case 11:
