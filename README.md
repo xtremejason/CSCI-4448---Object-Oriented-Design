@@ -15,7 +15,8 @@ Object Oriented Design principles were used all over the place, so much that it 
 Often times multiple design principles are used together. 
 I now understand why Java is used to teach this class. The language is structured around Object Oriented Design Principles.
 
-Had a lot of fun!
+Had a lot of fun! <br />
+<br />
 
 
 
