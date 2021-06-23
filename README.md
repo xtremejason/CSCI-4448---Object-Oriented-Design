@@ -1,7 +1,7 @@
 # CSCI-4448---Object-Oriented-Design
-OOD Projects w/ Jason Nguyen &amp; Varunjit Srinivas
+**OOD Projects w/ Jason Nguyen &amp; Varunjit Srinivas**
 
-Project Title: Homework 2 - Car Garage
+**Project Title: Homework 2 - Car Garage**
 
 The assignment was fun and was a really nice way to get our toes wet with Java development. 
 
@@ -20,8 +20,8 @@ Had a lot of fun! <br />
 
 
 
-OOAD Project Title: Homework 3 - Car Garage 
-Team Members: Jason Nguyen, Varunjit Srinivas, Isaac Sim
+**OOAD Project Title: Homework 3 - Car Garage 
+Team Members: Jason Nguyen, Varunjit Srinivas, Isaac Sim**
 
 We were all eager to code the Design Patterns that we have recently learned. We were pretty confident in our ability given the elaborate examples of the design patterns we learned in class and in our reading materials. We decided early on to delegate the work evenly, and to each make clones of the master branch so that we can work on our separate implementations individually.
 
