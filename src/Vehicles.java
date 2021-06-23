@@ -63,12 +63,29 @@ public class Vehicles {
         return true;
     }
 
+
     public void displayPlate(){
         System.out.println(plate);
     }
 
     public String getPlate(){
         return plate;
+    }
+
+    public boolean getLockStatus(){
+        return lockStatus;
+    }
+
+    public boolean getShineStatus(){
+        return shineStatus;
+    }
+
+    public boolean getTunedStatus(){
+        return tunedStatus;
+    }
+
+    public String getRunStatus(){
+        return runStatus;
     }
 
     public void getFuelType(){
