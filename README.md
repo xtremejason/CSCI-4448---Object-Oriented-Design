@@ -21,9 +21,14 @@ Had a lot of fun! <br />
 
 
 **OOAD Project Title: Homework 3 - Car Garage  <br />
-Team Members: Jason Nguyen, Varunjit Srinivas, Isaac Sim**
+Team Members: Jason Nguyen, Varunjit Srinivas, Isaac Sim** <br />
 
-We were all eager to code the Design Patterns that we have recently learned. We were pretty confident in our ability given the elaborate examples of the design patterns we learned in class and in our reading materials. We decided early on to delegate the work evenly, and to each make clones of the master branch so that we can work on our separate implementations individually.
+Software Used:
+IntelliJ Community: ver. 2021.1.2
+JUnit ver 5.7.2
+
+We were all eager to code the Design Patterns that we have recently learned. We were pretty confident in our ability given the elaborate examples of the design patterns we learned in class and in our reading materials. We decided early on to delegate the work evenly, and to each make clones of the master branch so that we can work on our separate implementations individually. <br />
+
 
 Issues Experienced: 
 -The schedules of our group were all over the place. Zoom meetings weren't feasible this week so we communicated on our progress throughout the week via phone messaging.
@@ -31,5 +36,5 @@ Issues Experienced:
 -JUnit Testing was a pain to learn as resources were scarcely available.
 
 Conclusion: 
-We all have a better grasp on the design patterns that were covered throughout the previous weeks of class. Learning it in class is one thing, actually coding it gave us a whole new understanding of the concepts. 
+We all have a better grasp on the design patterns that were covered throughout the previous weeks of class. Learning it in class is one thing, actually coding it gave us a whole new way of conceptualizing the Factory Pattern, Strategy Pattern, Observer Pattern, and the Observable.
 
