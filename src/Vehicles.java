@@ -9,7 +9,7 @@ public class Vehicles {
     //Private is only accessible to immediate class
     //Protected is only accessible to self and extended classes.
     protected String plate;
-    private boolean lockStatus;
+    private boolean lockStatus = true;
     private boolean shineStatus;
     protected boolean tunedStatus;
     protected String runStatus;
@@ -32,30 +32,35 @@ public class Vehicles {
         plate = vehicleType + s;
     }
 
-    public void lock(){
+    public boolean lock(){
         lockStatus = true;
+        return true;
     }
 
-    public void unlock(){
+    public boolean unlock(){
         lockStatus = false;
+        return true;
     }
 
     //Added 30% chance occurrence of vehicle sparkling instead of shine from a wash
-    public void shine(){
+    public boolean wash(){
         shineStatus = true;
         if(Math.random() < .7) {
             System.out.println(plate + " Shines in the sun.");
         } else {
             System.out.println(plate + " Sparkles so bright!!");
         }
+        return true;
     }
 
-    public void tune(){
+    public boolean tune(){
         tunedStatus = true;
+        return true;
     }
 
-    public void runs(){
+    public boolean runs(){
         System.out.println(plate + " " + runStatus);
+        return true;
     }
 
     public boolean drive(){

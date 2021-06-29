@@ -5,7 +5,7 @@ public class Car extends Vehicles{
     }
 
     //Adds condition for spontaneous sputter event for Car
-    public void tune(){
+    public boolean tune(){
         tunedStatus = true;
         if(Math.random() > .75){
             runStatus = "runs";
@@ -14,5 +14,6 @@ public class Car extends Vehicles{
             runStatus = "sputters";
             System.out.println("The vehicle " + plate + " " + runStatus);
         }
+        return true;
     }
 }

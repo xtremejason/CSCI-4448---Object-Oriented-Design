@@ -8,7 +8,8 @@ public class Trike extends Motorcycle{
         generatePlate("TRI");
     }
 
-    public void runs(){
+    public boolean runs(){
         System.out.println(plate + " " + "Pedals");
+        return true;
     }
 }

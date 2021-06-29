@@ -1,19 +1,15 @@
-import java.util.Random;
 
 
 public class Garage {
-    private int randomNum;
 
     Garage(){
     }
 
     //method to create objects of random vehicles with approx. equal probability.
-    public Vehicles createVehicleObject(){
-        Random rand = new Random();
-        randomNum = rand.nextInt(11);
+    public Vehicles createVehicleObject(int i){
         CarFactory cFactory = new CarFactory();
 
-        switch(randomNum){
+        switch(i){
             case 0:
                 Bike bike = new Bike();
                 return bike;

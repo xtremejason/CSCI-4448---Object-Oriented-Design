@@ -9,7 +9,8 @@ public class Convertible extends Car{
     }
 
     //overload runs method
-    public void runs(){
+    public boolean runs(){
         System.out.println(plate + " skrrrrrt");
+        return true;
     }
 }

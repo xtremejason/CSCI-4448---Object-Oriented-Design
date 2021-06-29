@@ -6,6 +6,23 @@ import java.util.Random;
 //By Jason Nguyen, Varunjit Srinivas, Isaac Sim
 
 public class main {
+    public static int menu(int time, InputSingleton scan){
+        System.out.println("\n");
+        if(time <= 12) System.out.println("It is currently " + time + " am...");
+        else System.out.println("It is currently " + time % 12 + " pm...");
+        System.out.println("What should the mechanic do?");
+        System.out.println("\n");
+        System.out.println("1. Unlock");
+        System.out.println("2. Wash");
+        System.out.println("3. Tune");
+        System.out.println("4. Test Drive");
+        System.out.println("5. Lock");
+        System.out.println("6. Close Garage");
+        System.out.println("\n");        
+
+        int input = scan.getInt();
+        return input;
+    }
 
     public static void main(String[] args) {
 
@@ -25,89 +42,139 @@ public class main {
         //*****************************************************
         //Actual Program Starts Here.
         //*****************************************************
-
-        //Hard coded #'s, can be modified in future.
-        System.out.println("Input the number of days to simulate:");
-        Scanner in = new Scanner(System.in);
-        while(!in.hasNextInt()) in.next();
-        int days =  in.nextInt();
-        System.out.println("Input the workload per day:");
-        while(!in.hasNextInt()) in.next();
-        int workload_per_day = in.nextInt();
-        in.close();
-
-
+        System.out.println("A new day has arrived");
         Random rand = new Random();
         int r = rand.nextInt(14);
+        //Observer
+        //Observables
+        Mechanic mech = new Mechanic(r);
+        System.out.println("Mechanic " + mech.name + " has opened the garage...");
 
-        //First look instantiates Mechanic object, Garage Object, and vehicles on task queue for the day.
-        for(int i=1; i<=days; i++){
-            //Observer
-            GarageAnnouncer ann = new GarageAnnouncer(r);
-            r = rand.nextInt(14);
-            //Observables
-            Mechanic mech = new Mechanic(r);
-            mech.addAnnouncer(ann);
-            GarageClock clock = new GarageClock();
-            clock.addAnnouncer(ann);
-
-            Garage garage = new Garage();
-            List<Vehicles> vehicles_to_work = new ArrayList<Vehicles>();
-            //Populates vehicles_to_work arrayList with random Vehicle objects
-            //Any car subclass objects are instantiated through Factory method
-            for(int j=0; j<workload_per_day; j++){
-                vehicles_to_work.add(garage.createVehicleObject());
-            }
-
-            //loop through the garage hours (8am - 8pm)
-            //Evertime an hour passes, the announcer announces the new time
-            //At certain hours, the mechanic will change its task
-            for(int j=0; j <= 12; j++){
-                clock.tick();
-                int t = clock.getTime();
-                switch(t){
-                    case 9: //8am; tick() causes the time to be 1 ahead
-                        for(int k=0; k < vehicles_to_work.size(); k++){
-                            mech.unlock(vehicles_to_work.get(k));
-                        }
-                        break;
-                    case 11: //10am
-                        for(int k = 0; k < vehicles_to_work.size(); k++){
-                            mech.wash(vehicles_to_work.get(k));
-                        }
-                        break;
-                    case 14: //1pm
-                        for(int k = 0; k < vehicles_to_work.size(); k++){
-                            mech.tuneUp(vehicles_to_work.get(k));
-                        }
-                        break;
-                    case 18: //5pm
-                        for(int k = 0; k < vehicles_to_work.size(); k++){
-                            //Condition for potential MonsterTruck crash
-                            if(mech.testDrive(vehicles_to_work.get(k)) == false){
-                                vehicles_to_work.remove(k);
-                                //calling superclass constructor method replaces employee.
-                                r = rand.nextInt(14);
-                                mech = new Mechanic(r);
-                                mech.addAnnouncer(ann);
-                            }
-                        }
-                        break;
-                    case 21: //8pm
-                        for(int k = 0; k < vehicles_to_work.size(); k++){
-                            mech.lockUp(vehicles_to_work.get(k));
-                        }
-                        break;
+        Garage garage = new Garage();
+        List<Vehicles> vehicles_to_work = new ArrayList<Vehicles>();
+        //Populates vehicles_to_work arrayList with random Vehicle objects
+        //Any car subclass objects are instantiated through Factory method
+        for(int j=0; j < 12; j++){
+            vehicles_to_work.add(garage.createVehicleObject(j));
+        }
+        boolean cont = true;
+        boolean fired = false;
+        boolean closed = false;
+        int time = 9;
+        boolean allUnlocked = true;
+        InputSingleton scan = InputSingleton.getInstance();
+        while(cont){
+            for (Vehicles v : vehicles_to_work){
+                if(v.getLockStatus()){
+                    allUnlocked = false;
                 }
             }
-            mech.finish();
-
-            //Output updates and formatting.
-            System.out.println("\n");
-            System.out.println("********************");
-            System.out.println("Tasks for day " + i + " are COMPLETE.");
-            System.out.println("********************");
-            System.out.println("\n");
+            if(allUnlocked & !closed){
+                switch(menu(time, scan)){
+                case 1:
+                    System.out.println("All cars are already unlocked!");
+                    break;
+                case 2:
+                    //wash all vehicles
+                    for (Vehicles v : vehicles_to_work){
+                        mech.takeTask(new Wash(v));
+                    }
+                    if(mech.executeTasks()) fired = true;
+                    time += 2;
+                    break;
+                case 3:
+                    for (Vehicles v : vehicles_to_work){
+                        mech.takeTask(new Tune(v));
+                    }
+                    if(mech.executeTasks()) fired = true;
+                    time += 4;
+                    break;
+                case 4:
+                    for (Vehicles v : vehicles_to_work){
+                        mech.takeTask(new Drive(v));
+                    }
+                    if(mech.executeTasks()) fired = true;
+                    time += 3;
+                    break;
+                case 5:
+                    mech.executeTasks();
+                    for (Vehicles v : vehicles_to_work){
+                        mech.takeTask(new Lock(v));
+                    }
+                    time += 1;
+                    if(mech.executeTasks()) fired = true;
+                    break;
+                case 6:
+                    System.out.println("Closing the garage for the day... Goodbye!");
+                    cont = false;
+                    break;
+                default:
+                    break;
+                }
+            }
+            else if(!allUnlocked & !closed){
+                switch(menu(time, scan)){
+                case 1:
+                    for (Vehicles v : vehicles_to_work){
+                        mech.takeTask(new Unlock(v));
+                    }
+                    if(mech.executeTasks()) fired = true;
+                    time += 1;
+                    allUnlocked = true;
+                    break;
+                case 2:
+                    System.out.println("All cars must be unlocked first!");
+                    break;
+                case 3:
+                    System.out.println("All cars must be unlocked first!");
+                    break;
+                case 4:
+                    System.out.println("All cars must be unlocked first!");
+                    break;
+                case 5:
+                    System.out.println("All cars must be unlocked first!");
+                    break;
+                case 6:
+                    System.out.println("Closing the garage for the day... Goodbye!");
+                    cont = false;
+                    break;
+                default:
+                    break;
+                }
+            }
+            else{
+                switch(menu(time, scan)){
+                case 1:
+                    System.out.println("It is time to close...");
+                    break;
+                case 2:
+                    System.out.println("It is time to close...");
+                    break;
+                case 3:
+                    System.out.println("It is time to close...");
+                    break;
+                case 4:
+                    System.out.println("It is time to close...");
+                    break;
+                case 5:
+                    System.out.println("It is time to close...");
+                    break;
+                case 6:
+                    System.out.println("Closing the garage for the day... Goodbye!");
+                    cont = false;
+                    break;
+                default:
+                    break;
+                }
+            }
+            if(time >= 20) closed = true;
+            if(fired) {
+                System.out.println("Mechanic " + mech.name + " has been fired!");
+                System.out.println("Closing the garage for the day... Goodbye!");
+                cont = false;
+            }
         }
+        scan.close();
     }
 }
+

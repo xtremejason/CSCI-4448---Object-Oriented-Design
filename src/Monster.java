@@ -5,8 +5,9 @@ public class Monster extends Truck{
     }
 
     //method overloading - polymorphism
-    public void runs(){
+    public boolean runs(){
         System.out.println(plate + " Vrooooms");
+        return true;
     }
 
     //Coded for spontaneous event where test driving Crashes.
