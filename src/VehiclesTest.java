@@ -19,7 +19,7 @@ class VehiclesTest {
     @org.junit.jupiter.api.Test
     void shine() {
         Vehicles v1 = new Vehicles();
-        v1.shine();
+        v1.wash();
         assertTrue(v1.getShineStatus());
     }
 

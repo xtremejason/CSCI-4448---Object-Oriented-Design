@@ -10,7 +10,8 @@ public class Bike extends Motorcycle{
     }
 
     //override method runs
-    public void runs(){
+    public boolean runs(){
         System.out.println(plate + " " + "Pedals");
+        return true;
     }
 }

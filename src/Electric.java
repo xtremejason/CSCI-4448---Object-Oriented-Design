@@ -9,7 +9,8 @@ public class Electric extends Scooter{
     }
 
     //overloading runs method
-    public void runs(){
+    public boolean runs(){
         System.out.println(plate + " whooooshes.");
+        return true;
     }
 }
