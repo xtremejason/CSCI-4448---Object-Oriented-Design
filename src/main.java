@@ -174,6 +174,12 @@ public class main {
                 cont = false;
             }
         }
+        //test for decoratotor - temporary
+        Vehicles veh = new Vehicles();
+        Task task = new Wash(veh);
+        task = new CeramicCoat(task);
+        System.out.println(task.getDescription());
+
         scan.close();
     }
 }
