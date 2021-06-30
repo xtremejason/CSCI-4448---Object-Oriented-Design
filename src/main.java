@@ -174,7 +174,7 @@ public class main {
                 cont = false;
             }
         }
-        //test for decoratotor - temporary
+        //test for decoratotor - temporary - add later to myUnitTest class
         Vehicles veh = new Vehicles();
         Task task = new Wash(veh);
         task = new CeramicCoat(task);
