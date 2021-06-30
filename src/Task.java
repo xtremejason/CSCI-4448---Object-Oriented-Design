@@ -9,7 +9,7 @@ public abstract class Task{
     }
     boolean execute(){ return true; }
 
-    String description = "Unknown Description";
+    String description = "";
 
     public String getDescription(){
         return description;

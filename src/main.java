@@ -178,6 +178,8 @@ public class main {
         Vehicles veh = new Vehicles();
         Task task = new Wash(veh);
         task = new CeramicCoat(task);
+        task = new CeramicCoat(task);
+        task = new GlitterWax(task);
         System.out.println(task.getDescription());
 
         scan.close();

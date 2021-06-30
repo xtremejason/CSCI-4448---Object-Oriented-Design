@@ -9,6 +9,6 @@ public class CeramicCoat extends TaskDecorator{
     }
 
     public String getDescription(){
-        return task.getDescription() + " ,Ceramic Coating has been added to your vehicle!";
+        return task.getDescription() + "Ceramic Coating has been applied! ";
     }
 }
