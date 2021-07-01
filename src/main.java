@@ -174,15 +174,9 @@ public class main {
                 cont = false;
             }
         }
-        //test for decoratotor - temporary - add later to myUnitTest class
-        Vehicles veh = new Vehicles();
-        Task task = new Wash(veh);
-        task = new CeramicCoat(task);
-        task = new CeramicCoat(task);
-        task = new GlitterWax(task);
-        System.out.println(task.getDescription());
-
         scan.close();
+
+
 
         //Runs all JUnit Tests
         MyUnitTest test = new MyUnitTest();
