@@ -1,7 +1,11 @@
 # CSCI-4448---Object-Oriented-Design
  
 **OOAD Project Title: Homework 2 - Car Garage** <br />
-**Team Members: Jason Nguyen, Varunjit Srinivas**
+**Team Members: Jason Nguyen, Varunjit Srinivas** <br />
+
+**Software Used:**  <br />
+**IntelliJ Community: ver. 2021.1.2** <br />
+**JUnit ver 5.7.2** <br />
 
 The assignment was fun and was a really nice way to get our toes wet with Java development. 
 
