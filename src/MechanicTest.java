@@ -10,7 +10,6 @@ class MechanicTest {
         Mechanic mech = new Mechanic(1);
         mech.addAnnouncer(ga);
         assertEquals(mech.ann, ga);
-
     }
 
     @Test

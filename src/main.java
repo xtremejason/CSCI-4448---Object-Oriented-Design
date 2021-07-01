@@ -175,6 +175,14 @@ public class main {
             }
         }
         scan.close();
+
+
+
+        //Runs all JUnit Tests
+        MyUnitTest test = new MyUnitTest();
+        test.runAllTests();
     }
+
+
 }
 
