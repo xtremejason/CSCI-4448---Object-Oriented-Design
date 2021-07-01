@@ -17,6 +17,9 @@ I now understand why Java is used to teach this class. The language is structure
 
 Had a lot of fun! <br />
 <br />
+**********************************************************************************************************************
+**********************************************************************************************************************
+<br />
 
 
 
@@ -39,6 +42,9 @@ We were all eager to code the Design Patterns that we have recently learned. We 
 We all have a better grasp on the design patterns that were covered throughout the previous weeks of class. Learning it in class is one thing, actually coding it gave us a whole new way of conceptualizing the Factory Pattern, Strategy Pattern, Observer Pattern, and the Observable.
 <br />
 
+**********************************************************************************************************************
+**********************************************************************************************************************
+<br />
 
 **OOAD Project Title: Homework 4 - Interactive Garage Application  <br />
 Team Members: Jason Nguyen, Varunjit Srinivas, Isaac Sim** <br />
@@ -58,3 +64,8 @@ Team Members: Jason Nguyen, Varunjit Srinivas, Isaac Sim** <br />
 
 **Conclusion:** <br /> 
 This project extension introduced several new design patterns that included Command Pattern, Decorator Pattern, and Singleton Pattern. It was a puzzle trying to grasp the new patterns and truly understood how they functioned under the hood so that they may be implemented into our classes. It was a fun learning experience and additionally, prepared us for the midterm exam during this week.
+
+**********************************************************************************************************************
+**********************************************************************************************************************
+<br />
+
