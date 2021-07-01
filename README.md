@@ -34,6 +34,7 @@ Team Members: Jason Nguyen, Varunjit Srinivas, Isaac Sim** <br />
 **IntelliJ Community: ver. 2021.1.2** <br />
 **JUnit ver 5.7.2** <br />
 
+**Overview:** <br />
 We were all eager to code the Design Patterns that we have recently learned. We were pretty confident in our ability given the elaborate examples of the design patterns we learned in class and in our reading materials. We decided early on to delegate the work evenly, and to each make clones of the master branch so that we can work on our separate implementations individually. <br />
 
 
