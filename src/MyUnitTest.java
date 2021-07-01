@@ -119,8 +119,32 @@ public class MyUnitTest {
                 System.out.println("** Vehicle Test 4 Failed. **");
             }
 
+            //Test13
+            MonsterTest monsterTest1 = new MonsterTest();
+            try {
+                monsterTest1.runs();
+                System.out.println("** MonsterTest 1 Successful. **");
+            }catch(IndexOutOfBoundsException e){
+                System.out.println("** MonsterTest 1 Failed. **");
+            }
 
-            System.out.println("ALL TESTS HAVE PASSED!");
+            //Test14
+            MonsterTest monsterTest2 = new MonsterTest();
+            try {
+                monsterTest2.drive();
+                System.out.println("** MonsterTest 2 Successful. **");
+            }catch(IndexOutOfBoundsException e){
+                System.out.println("** MonsterTest 2 Failed. **");
+            }
+
+            //Test15
+            MonsterTest monsterTest3 = new MonsterTest();
+            try {
+                monsterTest3.drive();
+                System.out.println("** MonsterTest 3 Successful. **");
+            }catch(IndexOutOfBoundsException e){
+                System.out.println("** MonsterTest 3 Failed. **");
+            }
 
 
             //Formatting for Test
