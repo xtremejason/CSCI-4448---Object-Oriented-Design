@@ -9,52 +9,116 @@ public class MyUnitTest {
             System.out.println("*****************************************************");
 
             //Test1
-            ElectricTest test = new ElectricTest();
-            test.Electric();
+            ElectricTest electricTest = new ElectricTest();
+            try {
+                electricTest.Electric();
+                System.out.println("** Electric Test Successful. **");
+            }catch(IndexOutOfBoundsException e){
+                System.out.println("** Electric Test Failed. **");
+            }
+
 
             //Test2
             MechanicTest mechTest1 = new MechanicTest();
-            mechTest1.addAnnouncer();
+            try {
+                mechTest1.addAnnouncer();
+                System.out.println("** Mechanic Test 1 Successful. **");
+            }catch(IndexOutOfBoundsException e){
+                System.out.println("** Mechanic Test 1 Failed. **");
+            }
 
             //Test3
             MechanicTest mechTest2 = new MechanicTest();
-            mechTest2.setName();
+            try {
+                mechTest2.setName();
+                System.out.println("** Mechanic Test 2 Successful. **");
+            }catch(IndexOutOfBoundsException e){
+                System.out.println("** Mechanic Test 2 Failed. **");
+            }
 
             //Test4
             SidecarTest sidecarTest1 = new SidecarTest();
-            sidecarTest1.Sidecar();
+            try {
+                sidecarTest1.Sidecar();
+                System.out.println("** Sidecar Test 1 Successful. **");
+            }catch(IndexOutOfBoundsException e){
+                System.out.println("** Sidecar Test 1 Failed. **");
+            }
+
 
             //Test5
             SUVTest suvTest = new SUVTest();
-            suvTest.SUV();
+            try {
+                suvTest.SUV();
+                System.out.println("** SUV Test 1 Successful. **");
+            }catch(IndexOutOfBoundsException e){
+                System.out.println("** SUV Test 1 Failed. **");
+            }
 
             //Test6
             TaskDecoratorTest taskDecoratorTest = new TaskDecoratorTest();
-            taskDecoratorTest.getDescription();
+            try {
+                taskDecoratorTest.getDescription();
+                System.out.println("** TaskDecorator Test Successful. **");
+            }catch(IndexOutOfBoundsException e){
+                System.out.println("** TaskDecorator Test Failed. **");
+            }
 
             //Test7
             TrikeTest trikeTest = new TrikeTest();
-            trikeTest.Trike();
+            try {
+                trikeTest.Trike();
+                System.out.println("** Trike Test Successful. **");
+            }catch(IndexOutOfBoundsException e){
+                System.out.println("** Trike Test Failed.");
+            }
 
             //Test8
             TruckTest truckTest = new TruckTest();
-            truckTest.Truck();
+            try {
+                truckTest.Truck();
+                System.out.println("** Truck Test Successful. **");
+            }catch(IndexOutOfBoundsException e){
+                System.out.println("** Truck Test Failed. **");
+            }
 
             //Test9
             VehiclesTest vehTest1 = new VehiclesTest();
-            vehTest1.getLockStatus();
+            try {
+                vehTest1.getLockStatus();
+                System.out.println("** Vehicle Test 1 Successful. **");
+            }catch(IndexOutOfBoundsException e){
+                System.out.println("** Vehicle Test 1 Failed. **");
+            }
 
             //Test10
             VehiclesTest vehTest2 = new VehiclesTest();
-            vehTest2.unlock();
+            try {
+                vehTest2.unlock();
+                System.out.println("** Vehicle Test 2 Successful. **");
+            }catch(IndexOutOfBoundsException e){
+                System.out.println("** Vehicle Test 2 Failed. **");
+            }
 
             //Test11
             VehiclesTest vehTest3 = new VehiclesTest();
-            vehTest3.shine();
+            try {
+                vehTest3.shine();
+                System.out.println("** Vehicle Test 3 Successful. **");
+            }catch(IndexOutOfBoundsException e){
+                System.out.println("** Vehicle Test 3 Failed. **");
+            }
+
 
             //Test12
             VehiclesTest vehTest4 = new VehiclesTest();
-            vehTest4.tune();
+            try {
+                vehTest4.tune();
+                System.out.println("** Vehicle Test 4 Successful. **");
+            }catch(IndexOutOfBoundsException e){
+                System.out.println("** Vehicle Test 4 Failed. **");
+            }
+
 
             System.out.println("ALL TESTS HAVE PASSED!");
 
