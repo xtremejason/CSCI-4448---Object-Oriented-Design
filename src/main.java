@@ -183,6 +183,12 @@ public class main {
         System.out.println(task.getDescription());
 
         scan.close();
+
+        //Runs all JUnit Tests
+        MyUnitTest test = new MyUnitTest();
+        test.runAllTests();
     }
+
+
 }
 

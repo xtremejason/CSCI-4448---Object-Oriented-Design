@@ -21,6 +21,7 @@ public class Monster extends Truck{
         }
     }
 
+    //Overload wash method for more detailed wash print statements.
     public boolean wash(){
         shineStatus = true;
         System.out.println(plate + " is Soaped. " + plate + " is Scrubbed. " + plate + " is Rinsed. " + plate + " is Dried." + plate + " is Waxed. " + plate + " is Waxed. " + plate + " is Polished. " + plate + " is Detailed.");
